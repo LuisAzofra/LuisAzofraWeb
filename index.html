@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Azofra - Portfolio</title>
     <style>
-        /* Tailwind-like CSS */
         :root {
             --primary: #1a202c;
             --secondary: #2d3748;
@@ -544,7 +543,7 @@
                         <h3 style="margin: 0;">Full Stack Developer - Intern</h3>
                     </div>
                 </div>
-                <p style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
+                <p class="job-dates" style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
             </div>
             <ul style="margin: 10px 0; padding-left: 30px; color: var(--light-text);">
                 <li>Developed front-end and back-end functionalities to enhance company tools.</li>
@@ -562,7 +561,7 @@
         </div>
 
         <!-- Yakk Start-Up Job -->
-        <div style="background-color: var(--white); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="sharpei-job-container" style="position: relative; background-color: var(--white); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                 <div style="display: flex; align-items: center; gap: 15px;">
                     <img src="WebLuis/assets/Yakk-400.png" alt="Yakk Logo" style="width: 100px; height: 100px; object-fit: contain;">
@@ -584,6 +583,7 @@
 
 <!-- Additional Styles -->
 <style>
+    
         /* Posiciona el perro únicamente en Sharpei Job */
     .sharpei-job-container {
         position: relative; /* Establece un contenedor relativo para el perro */
@@ -1005,29 +1005,30 @@
     </div>
 
     <!-- Right Column: Contact Form -->
-    <div style="flex: 2; min-width: 300px; margin-top: 36px;">
-        <form action="send-email.php" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-            <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-            <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-            <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-            <select name="service" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-                <option value="" disabled selected>Select project type</option>
-                <option value="full-stack-engineer">Full-Stack Engineer</option>
-                <option value="data-analysis">Data Analysis</option>
-                <option value="other">Other</option>
-            </select>
-            <textarea name="message" placeholder="Message" rows="4" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;"></textarea>
-            <button type="submit" class="fly-button">
-                <div class="svg-wrapper-1">
-                  <div class="svg-wrapper">
+    <form action="send-email.php" method="POST" id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+        <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+        <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+        <select name="service" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+            <option value="" disabled selected>Select project type</option>
+            <option value="full-stack-engineer">Full-Stack Engineer</option>
+            <option value="data-analysis">Data Analysis</option>
+            <option value="other">Other</option>
+        </select>
+        <textarea name="message" placeholder="Message" rows="4" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;"></textarea>
+        <button type="submit" class="fly-button">
+            <div class="svg-wrapper-1">
+                <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                      <path fill="none" d="M0 0h24v24H0z"></path>
-                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                     </svg>
-                  </div>
                 </div>
-                <span>Send</span>
-              </button>
+            </div>
+            <span>Send</span>
+        </button>
+    </form>
+    
               
               <style>
               /* Especificar una clase única para este botón */
@@ -1148,6 +1149,10 @@
   h1, h2, h3 {
     font-size: 2.5em; /* Ajustar según sea necesario */
   }
+  header .logo {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+
 
     nav {
         flex-direction: column;
@@ -1166,21 +1171,36 @@
         text-align: center;
     }
 
-    #about .about-text {
-        margin: 0 10px; /* Reducir márgenes laterales */
-    }
-
-    #about .about-img {
-        margin-top: 20px; /* Añadir espacio entre texto e imagen */
+    #about {
+        display: flex;
+        flex-direction: column; /* Cambiar a disposición en columna */
+        text-align: center; /* Centrar contenido */
+        align-items: center; /* Centrar elementos */
     }
 
     .flip-card {
-        width: 90%; /* Reducir el tamaño de la tarjeta */
-        height: auto; /* Permitir altura dinámica */
+        width: 90%; /* Imagen ocupa todo el ancho */
+        height:700px;
+        order: 2; /* Recolocar la imagen al final */
+        margin: 40px 0; /* Espaciado alrededor de la imagen */
+    }
+    .flip-caption,
+    .flip-caption2 {
+        text-align: center; /* Centrar el texto */
+        margin: 5px auto; /* Ajustar los márgenes */
+        width: 100%; /* Asegurarse de que ocupe todo el ancho */
     }
 
+
     .flip-card img {
-        height: auto; /* Ajustar imagen según el ancho */
+        width: 100%; /* La imagen ocupará todo el ancho */
+        height: 700px; /* Mantener proporciones */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+
+    .about-text {
+        margin-bottom:-110px;
+        order: 1; /* Recolocar el texto al principio */
     }
 }
 
@@ -1216,21 +1236,41 @@
 /* Education and Training */
 @media (max-width: 768px) {
     #education {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
+        display: flex;
+        flex-direction: column; /* Cambiar disposición a columna */
+        align-items: center; /* Centrar las tarjetas */
+        gap: 20px; /* Añadir espacio entre tarjetas */
     }
 
     #education > div {
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; /* Asegurar que el contenido interno esté en columna */
+        align-items: center; /* Centrar el contenido de cada tarjeta */
+        width: 100%; /* Ocupar el ancho completo */
+        max-width: 90%; /* Limitar el ancho para no ocupar toda la pantalla */
+        margin: 0 auto; /* Centrar horizontalmente */
     }
 
     #education img {
-        width: 80%; /* Reducir tamaño de imagen */
-        height: auto; /* Mantener proporción */
-        margin: 0 auto; /* Centrar imágenes */
+        width: 90%; /* Las imágenes ocupan el ancho completo de su contenedor */
+        max-width: 300px; /* Limitar el tamaño máximo */
+        height: auto; /* Mantener proporciones */
+        margin-bottom: 10px; /* Añadir un margen entre la imagen y el texto */
+    }
+
+    #education h3 {
+        font-size: 1.2rem; /* Ajustar tamaño del título */
+        text-align: center; /* Centrar el texto */
+        margin: 10px 0; /* Espaciado alrededor del título */
+    }
+
+    #education p {
+        font-size: 1rem; /* Tamaño adecuado para texto */
+        text-align: center; /* Centrar el texto */
+        margin: 5px 0; /* Espaciado entre los párrafos */
     }
 }
+
 
 /* General: Reducir padding para secciones */
 @media (max-width: 768px) {
