@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luis Azofra - Portfolio</title>
     <style>
+        /* Tailwind-like CSS */
         :root {
             --primary: #1a202c;
             --secondary: #2d3748;
@@ -1005,30 +1006,29 @@
     </div>
 
     <!-- Right Column: Contact Form -->
-    <form action="send-email.php" method="POST" id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
-        <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-        <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-        <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-        <select name="service" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
-            <option value="" disabled selected>Select project type</option>
-            <option value="full-stack-engineer">Full-Stack Engineer</option>
-            <option value="data-analysis">Data Analysis</option>
-            <option value="other">Other</option>
-        </select>
-        <textarea name="message" placeholder="Message" rows="4" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;"></textarea>
-        <button type="submit" class="fly-button">
-            <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
+    <div style="flex: 2; min-width: 300px; margin-top: 36px;">
+        <form action="send-email.php" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+            <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+            <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+            <select name="service" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
+                <option value="" disabled selected>Select project type</option>
+                <option value="full-stack-engineer">Full-Stack Engineer</option>
+                <option value="data-analysis">Data Analysis</option>
+                <option value="other">Other</option>
+            </select>
+            <textarea name="message" placeholder="Message" rows="4" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;"></textarea>
+            <button type="submit" class="fly-button">
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
                     </svg>
+                  </div>
                 </div>
-            </div>
-            <span>Send</span>
-        </button>
-    </form>
-    
+                <span>Send</span>
+              </button>
               
               <style>
               /* Especificar una clase única para este botón */
