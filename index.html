@@ -1148,7 +1148,105 @@
   h1, h2, h3 {
     font-size: 2.5em; /* Ajustar según sea necesario */
   }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .download-btn {
+        margin-top: 10px;
+    }
 }
+/* About Me */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .about-text {
+        margin: 0 10px; /* Reducir márgenes laterales */
+    }
+
+    #about .about-img {
+        margin-top: 20px; /* Añadir espacio entre texto e imagen */
+    }
+
+    .flip-card {
+        width: 90%; /* Reducir el tamaño de la tarjeta */
+        height: auto; /* Permitir altura dinámica */
+    }
+
+    .flip-card img {
+        height: auto; /* Ajustar imagen según el ancho */
+    }
+}
+
+/* Experience */
+@media (max-width: 768px) {
+    .sharpei-job-container,
+    .yakk-job-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .sharpei-job-container p,
+    .yakk-job-container p {
+        font-size: 0.9rem; /* Reducir tamaño de fuente */
+    }
+
+    .sharpei-job-container ul,
+    .yakk-job-container ul {
+        margin-left: 15px; /* Ajustar márgenes de las listas */
+    }
+
+    .sharpei-job-container > div,
+    .yakk-job-container > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sharpei-job-container p {
+        margin-top: 10px;
+    }
+}
+
+/* Education and Training */
+@media (max-width: 768px) {
+    #education {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    #education > div {
+        margin-bottom: 20px;
+    }
+
+    #education img {
+        width: 80%; /* Reducir tamaño de imagen */
+        height: auto; /* Mantener proporción */
+        margin: 0 auto; /* Centrar imágenes */
+    }
+}
+
+/* General: Reducir padding para secciones */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px 10px; /* Reducir espacios internos */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Ajustar tamaño de títulos */
+    }
+
+    p {
+        font-size: 0.9rem; /* Reducir tamaño de fuente general */
+    }
+}
+
     </style>
     
     <script>
