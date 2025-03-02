@@ -214,22 +214,22 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1 class="fade-in-up">Hi, I'm Luis Azofra <span class="waving-hand">👋</span></h1>
-            <p class="fade-in-up delay-1">
+            <h1>Hi, I'm Luis Azofra 👋</h1>
+            <p>
                 Dedicated Computer Engineering student with experience in software
                 development, Data Science, strong analytical and problem-solving skills,
                 and passion for creating innovative technology solutions. Thrives in
                 collaborative environments, committed to continuous learning and
                 professional growth.
             </p>
-            <div class="info fade-in-up delay-2" style="display: flex; align-items: center; gap: 6px;">
+            <div class="info" style="display: flex; align-items: center; gap: 6px;">
                 <div class="loader"></div>
                 <span>Berlin, Germany</span>
     <span style="margin-left: 30px;margin-bottom: 3px;">✔️ Available for Work</span>
          
             </div>
         </div>
-        <div class="hero-img fade-in-up delay-3">
+        <div class="hero-img">
             <img src="assets/foto linkedin.jpg" alt="Luis Azofra">
         </div>
     </section>
@@ -351,57 +351,6 @@
   100% {
     transform: scale(1);
   }
-}
-
-/* Animación de entrada desde abajo */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px); /* Inicia más abajo */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Aplicar la animación */
-.fade-in-up {
-    opacity: 0; /* Oculto antes de la animación */
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Agregar retraso al párrafo para que aparezca después del título */
-.delay-1 {
-    animation-delay: 0.3s;
-}
-
-/* Retrasar "Berlin, Germany" y "Available for Work" */
-.delay-2 {
-    animation-delay: 0.6s;
-}
-
-/* Retrasar la imagen para que salga de última */
-.delay-3 {
-    animation-delay: 0.9s;
-}
-.waving-hand {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% { transform: rotate( 0.0deg) }
-  15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-  30% { transform: rotate(-8.0deg) }
-  40% { transform: rotate(14.0deg) }
-  50% { transform: rotate(-4.0deg) }
-  60% { transform: rotate(10.0deg) }
-  70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
- 100% { transform: rotate( 0.0deg) }
 }
 
      /* Flip Card Container */
@@ -1057,7 +1006,7 @@
 
     <!-- Right Column: Contact Form -->
     <div style="flex: 2; min-width: 300px; margin-top: 36px;">
-        <form action="https://formspree.io/f/your-form-id" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <form action="send-email.php" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
             <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
             <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
             <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
@@ -1192,6 +1141,12 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 2.5em; /* Ajustar según sea necesario */
   }
 }
     </style>
