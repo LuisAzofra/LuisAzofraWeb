@@ -214,23 +214,23 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Hi, I'm Luis Azofra 👋</h1>
-            <p>
+            <h1 class="fade-in-up">Hi, I'm Luis Azofra <span class="waving-hand">👋</span></h1>
+            <p class="fade-in-up delay-1">
                 Dedicated Computer Engineering student with experience in software
                 development, Data Science, strong analytical and problem-solving skills,
                 and passion for creating innovative technology solutions. Thrives in
                 collaborative environments, committed to continuous learning and
                 professional growth.
             </p>
-            <div class="info" style="display: flex; align-items: center; gap: 6px;">
+            <div class="info fade-in-up delay-2" style="display: flex; align-items: center; gap: 6px;">
                 <div class="loader"></div>
                 <span>Berlin, Germany</span>
     <span style="margin-left: 30px;margin-bottom: 3px;">✔️ Available for Work</span>
          
             </div>
         </div>
-        <div class="hero-img">
-            <img src="WebLuis/assets/foto linkedin.jpg" alt="Luis Azofra">
+        <div class="hero-img fade-in-up delay-3">
+            <img src="assets/foto linkedin.jpg" alt="Luis Azofra">
         </div>
     </section>
 
@@ -240,11 +240,11 @@
       <div class="flip-card-inner">
         <!-- Front Side (Image) -->
         <div class="flip-card-front">
-          <img src="WebLuis/assets/Alexanderplatz.jpeg" alt="Luis Azofra">
+          <img src="assets/Alexanderplatz.jpeg" alt="Luis Azofra">
         </div>
         <!-- Back Side (Second Image) -->
       <div class="flip-card-back">
-        <img src="WebLuis/assets/Foto Berlin.jpeg" alt="Back Image">
+        <img src="assets/Foto Berlin.jpeg" alt="Back Image">
       </div>
     </div>
     <!-- Caption Below -->
@@ -351,6 +351,57 @@
   100% {
     transform: scale(1);
   }
+}
+
+/* Animación de entrada desde abajo */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Inicia más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación */
+.fade-in-up {
+    opacity: 0; /* Oculto antes de la animación */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Agregar retraso al párrafo para que aparezca después del título */
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+/* Retrasar "Berlin, Germany" y "Available for Work" */
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+/* Retrasar la imagen para que salga de última */
+.delay-3 {
+    animation-delay: 0.9s;
+}
+.waving-hand {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+  15% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+  30% { transform: rotate(-8.0deg) }
+  40% { transform: rotate(14.0deg) }
+  50% { transform: rotate(-4.0deg) }
+  60% { transform: rotate(10.0deg) }
+  70% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+ 100% { transform: rotate( 0.0deg) }
 }
 
      /* Flip Card Container */
@@ -463,62 +514,62 @@
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
             <!-- Skill 1 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/Java-Logo.svg.png" alt="Java Logo" class="skill-logo">
+                <img src="assets/Java-Logo.svg.png" alt="Java Logo" class="skill-logo">
                 <p style="color: var(--text);">Java</p>
             </div>
             <!-- Skill 2 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/Python-logo-notext.svg.png" alt="Python Logo" class="skill-logo">
+                <img src="assets/Python-logo-notext.svg.png" alt="Python Logo" class="skill-logo">
                 <p style="color: var(--text);">Python</p>
             </div>
             <!-- Skill 3 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/C_Logo.png" alt="C# Logo" class="skill-logo">
+                <img src="assets/C_Logo.png" alt="C# Logo" class="skill-logo">
                 <p style="color: var(--text);">C#</p>
             </div>
             <!-- Skill 4 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/Sql_data_base_with_logo.svg.png" alt="SQL Logo" class="skill-logo">
+                <img src="assets/Sql_data_base_with_logo.svg.png" alt="SQL Logo" class="skill-logo">
                 <p style="color: var(--text);">SQL</p>
             </div>
             <!-- Skill 5 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" class="skill-logo">
+                <img src="assets/HTML5_logo_and_wordmark.svg.png" alt="HTML Logo" class="skill-logo">
                 <p style="color: var(--text);">HTML</p>
             </div>
             <!-- Skill 6 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/CSS3_logo_and_wordmark.svg.png" alt="CSS Logo" class="skill-logo">
+                <img src="assets/CSS3_logo_and_wordmark.svg.png" alt="CSS Logo" class="skill-logo">
                 <p style="color: var(--text);">CSS</p>
             </div>
             <!-- Skill 7 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/json_logo.webp" alt="JSON Logo" class="skill-logo">
+                <img src="assets/json_logo.webp" alt="JSON Logo" class="skill-logo">
                 <p style="color: var(--text);">JSON</p>
             </div>
             <!-- Skill 8 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/Apache_Spark_logo.svg.png" alt="Apache Spark Logo" class="skill-logo">
+                <img src="assets/Apache_Spark_logo.svg.png" alt="Apache Spark Logo" class="skill-logo">
                 <p style="color: var(--text);">Apache Spark</p>
             </div>
             <!-- Skill 9 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/Power-BI-Logo.png" alt="Power BI Logo" class="skill-logo">
+                <img src="assets/Power-BI-Logo.png" alt="Power BI Logo" class="skill-logo">
                 <p style="color: var(--text);">Power BI</p>
             </div>
             <!-- Skill 10 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/JavaScript-logo.png" alt="JavaScript Logo" class="skill-logo">
+                <img src="assets/JavaScript-logo.png" alt="JavaScript Logo" class="skill-logo">
                 <p style="color: var(--text);">JavaScript</p>
             </div>
             <!-- Skill 11 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/MATLAB-logo.png" alt="MATLAB Logo" class="skill-logo">
+                <img src="assets/MATLAB-logo.png" alt="MATLAB Logo" class="skill-logo">
                 <p style="color: var(--text);">MATLAB</p>
             </div>
             <!-- Skill 12 -->
             <div style="text-align: center; width: 120px;">
-                <img src="WebLuis/assets/RStudio_logo_flat.svg.png" alt="RStudio Logo" class="skill-logo">
+                <img src="assets/RStudio_logo_flat.svg.png" alt="RStudio Logo" class="skill-logo">
                 <p style="color: var(--text);">RStudio</p>
             </div>
         </div>
@@ -538,13 +589,13 @@
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                 <div style="display: flex; align-items: center; gap: 15px;">
                     <a href="https://www.gosharpei.com/" target="_blank" style="display: block; text-decoration: none;">
-                        <img src="WebLuis/assets/Sharpei-logo.png" alt="Sharpei Logo" style="width: 100px; height: 100px; object-fit: contain;">
+                        <img src="assets/Sharpei-logo.png" alt="Sharpei Logo" style="width: 100px; height: 100px; object-fit: contain;">
                     </a>
                     <div>
                         <h3 style="margin: 0;">Full Stack Developer - Intern</h3>
                     </div>
                 </div>
-                <p class="job-dates" style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
+                <p style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
             </div>
             <ul style="margin: 10px 0; padding-left: 30px; color: var(--light-text);">
                 <li>Developed front-end and back-end functionalities to enhance company tools.</li>
@@ -557,15 +608,15 @@
             </p>
             <!-- Dog Animation -->
             <div class="dog-container">
-                <img src="WebLuis/assets/sharpei_logo_dog.jpg" alt="Walking Dog" class="dog">
+                <img src="C:\Users\luisa\Downloads\sharpei_logo.jpg" alt="Walking Dog" class="dog">
             </div>
         </div>
 
         <!-- Yakk Start-Up Job -->
-        <div class="sharpei-job-container" style="position: relative; background-color: var(--white); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: var(--white); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
             <div style="display: flex; justify-content: space-between; align-items: flex-start;">
                 <div style="display: flex; align-items: center; gap: 15px;">
-                    <img src="WebLuis/assets/Yakk-400.png" alt="Yakk Logo" style="width: 100px; height: 100px; object-fit: contain;">
+                    <img src="assets/Yakk-400.png" alt="Yakk Logo" style="width: 100px; height: 100px; object-fit: contain;">
                     <div>
                         <h3 style="margin: 0;">Software Developer - Summer Internship</h3>
                     </div>
@@ -584,7 +635,6 @@
 
 <!-- Additional Styles -->
 <style>
-    
         /* Posiciona el perro únicamente en Sharpei Job */
     .sharpei-job-container {
         position: relative; /* Establece un contenedor relativo para el perro */
@@ -686,7 +736,7 @@
         <!-- Project 1 -->
         <div class="card">
             <div class="card-image" style="background-color: rgb(236, 236, 236); display: grid; grid-template-columns: repeat(2, auto); justify-content: center; align-items: center; gap: 10px; padding: 10px;">
-                <img src="WebLuis/assets/sharpei web tool.png" alt="Java Logo"  style="width: 195px; height: 150px; margin-left: 8px; margin-top: -10px; border-top-left-radius: 5px; border-top-right-radius: 5px; filter: brightness(0.97);">
+                <img src="assets/sharpei web tool.png" alt="Java Logo"  style="width: 195px; height: 150px; margin-left: 8px; margin-top: -10px; border-top-left-radius: 5px; border-top-right-radius: 5px; filter: brightness(0.97);">
             </div>
             <div class="category">HTML/CSS/JavaScript Tool</div>
             <div class="heading">Sharpei Web ROI Calculator
@@ -715,7 +765,7 @@
         <!-- Project 3 -->
         <div class="card">
             <div class="card-image" style="background-color: rgb(236, 236, 236); display: grid; grid-template-columns: repeat(2, auto); justify-content: center; align-items: center; gap: 10px; padding: 10px;">
-                <img src="WebLuis/assets/Predefined Cards with Berserk theme.png" 
+                <img src="assets/Predefined Cards with Berserk theme.png" 
                 alt="Java Logo" 
                 style="width: 195px; height: 150px; margin-left: 8px; margin-top: -10px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
            
@@ -747,11 +797,11 @@
     <h3 class="marquee-title">Companies and Institutions I've Created Projects For</h3>
     <div class="marquee">
         <div class="marquee-content">
-            <img src="WebLuis/assets/Sharpei-logo.png" alt="Logo 1">
-            <img src="WebLuis/assets/Yakk-400.png" alt="Logo 2">
-            <img src="WebLuis/assets/upm-logo.jpg" alt="Logo 3">
-            <img src="WebLuis/assets/tub logo.png" alt="Logo 4">
-            <img src="WebLuis/assets/everest logo.png" alt="Logo 5">
+            <img src="assets/Sharpei-logo.png" alt="Logo 1">
+            <img src="assets/Yakk-400.png" alt="Logo 2">
+            <img src="assets/upm-logo.jpg" alt="Logo 3">
+            <img src="assets/tub logo.png" alt="Logo 4">
+            <img src="assets/everest logo.png" alt="Logo 5">
         </div>
     </div>
 </div>
@@ -938,7 +988,7 @@
             <h3 style="margin: 5px 0;">Computer Science Bachelor</h3>
             <p style="margin: 0; color: #6b7280;">Technische Universität Berlin (TUB)</p>
             <a href="https://www.tu.berlin/" target="_blank">
-                <img src="WebLuis/assets/Technische Universität Berlin.jpg" alt="TUB Logo" 
+                <img src="assets/Technische Universität Berlin.jpg" alt="TUB Logo" 
                      style="width: 300px; height: 150px; margin-top: 10px; border-radius: 10px; 
                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
             </a>
@@ -950,7 +1000,7 @@
             <h3 style="margin: 5px 0;">Computer Engineering Bachelor</h3>
             <p style="margin: 0; color: #6b7280;">Universidad Politécnica de Madrid (UPM)</p>
             <a href="https://www.upm.es/" target="_blank">
-                <img src="WebLuis/assets/upm-logo.jpg" alt="UPM Logo" 
+                <img src="assets/upm-logo.jpg" alt="UPM Logo" 
                      style="width: 300px; height: 150px; margin-top: 10px; border-radius: 10px; 
                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
             </a>
@@ -962,7 +1012,7 @@
             <h3 style="margin: 5px 0;">Advanced Technical College Studies</h3>
             <p style="margin: 0; color: #6b7280;">Everest School</p>
             <a href="https://www.everestschool.es/en/" target="_blank">
-                <img src="WebLuis/assets/everest school.png" alt="Everest Logo" 
+                <img src="assets/everest school.png" alt="Everest Logo" 
                      style="width: 330px; height: 150px; margin-top: 10px; border-radius: 10px; 
                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
             </a>
@@ -1007,7 +1057,7 @@
 
     <!-- Right Column: Contact Form -->
     <div style="flex: 2; min-width: 300px; margin-top: 36px;">
-        <form action="https://formspree.io/f/xnnnvlbv" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <form action="https://formspree.io/f/your-form-id" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
             <input type="text" name="name" placeholder="Name" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
             <input type="email" name="email" placeholder="Email" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
             <input type="text" name="company" placeholder="Company" required style="padding: 12px; font-size: 1rem; border: 1px solid #e2e8f0; border-radius: 5px; background-color: #f9f9f9;">
@@ -1144,149 +1194,6 @@
     opacity: 1;
   }
 }
-/* Diseño responsivo */
-@media (max-width: 768px) {
-  h1, h2, h3 {
-    font-size: 2.5em; /* Ajustar según sea necesario */
-  }
-  header .logo {
-        font-size: 1rem; /* Reduce el tamaño del texto */
-    }
-
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .download-btn {
-        margin-top: 10px;
-    }
-}
-/* About Me */
-@media (max-width: 768px) {
-    #about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #about {
-        display: flex;
-        flex-direction: column; /* Cambiar a disposición en columna */
-        text-align: center; /* Centrar contenido */
-        align-items: center; /* Centrar elementos */
-    }
-
-    .flip-card {
-        width: 90%; /* Imagen ocupa todo el ancho */
-        height:700px;
-        order: 2; /* Recolocar la imagen al final */
-        margin: 40px 0; /* Espaciado alrededor de la imagen */
-    }
-    .flip-caption,
-    .flip-caption2 {
-        text-align: center; /* Centrar el texto */
-        margin: 5px auto; /* Ajustar los márgenes */
-        width: 100%; /* Asegurarse de que ocupe todo el ancho */
-    }
-
-
-    .flip-card img {
-        width: 100%; /* La imagen ocupará todo el ancho */
-        height: 700px; /* Mantener proporciones */
-        border-radius: 10px; /* Bordes redondeados */
-    }
-
-    .about-text {
-        margin-bottom:-110px;
-        order: 1; /* Recolocar el texto al principio */
-    }
-}
-
-/* Experience */
-@media (max-width: 768px) {
-    .sharpei-job-container,
-    .yakk-job-container {
-        padding: 10px;
-        width: 95%;
-    }
-
-    .sharpei-job-container p,
-    .yakk-job-container p {
-        font-size: 0.9rem; /* Reducir tamaño de fuente */
-    }
-
-    .sharpei-job-container ul,
-    .yakk-job-container ul {
-        margin-left: 15px; /* Ajustar márgenes de las listas */
-    }
-
-    .sharpei-job-container > div,
-    .yakk-job-container > div {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sharpei-job-container p {
-        margin-top: 10px;
-    }
-}
-
-/* Education and Training */
-@media (max-width: 768px) {
-    #education {
-        display: flex;
-        flex-direction: column; /* Cambiar disposición a columna */
-        align-items: center; /* Centrar las tarjetas */
-        gap: 20px; /* Añadir espacio entre tarjetas */
-    }
-
-    #education > div {
-        display: flex;
-        flex-direction: column; /* Asegurar que el contenido interno esté en columna */
-        align-items: center; /* Centrar el contenido de cada tarjeta */
-        width: 100%; /* Ocupar el ancho completo */
-        max-width: 90%; /* Limitar el ancho para no ocupar toda la pantalla */
-        margin: 0 auto; /* Centrar horizontalmente */
-    }
-
-    #education img {
-        width: 90%; /* Las imágenes ocupan el ancho completo de su contenedor */
-        max-width: 300px; /* Limitar el tamaño máximo */
-        height: auto; /* Mantener proporciones */
-        margin-bottom: 10px; /* Añadir un margen entre la imagen y el texto */
-    }
-
-    #education h3 {
-        font-size: 1.2rem; /* Ajustar tamaño del título */
-        text-align: center; /* Centrar el texto */
-        margin: 10px 0; /* Espaciado alrededor del título */
-    }
-
-    #education p {
-        font-size: 1rem; /* Tamaño adecuado para texto */
-        text-align: center; /* Centrar el texto */
-        margin: 5px 0; /* Espaciado entre los párrafos */
-    }
-}
-
-
-/* General: Reducir padding para secciones */
-@media (max-width: 768px) {
-    .section {
-        padding: 20px 10px; /* Reducir espacios internos */
-    }
-
-    h1, h2, h3 {
-        font-size: 1.5rem; /* Ajustar tamaño de títulos */
-    }
-
-    p {
-        font-size: 0.9rem; /* Reducir tamaño de fuente general */
-    }
-}
-
     </style>
     
     <script>
