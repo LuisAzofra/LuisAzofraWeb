@@ -93,6 +93,15 @@
             gap: 20px;
             font-size: 1rem;
         }
+        /* Alineación en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .info {
+        flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Asegura que el texto esté alineado */
+        gap: 8px; /* Reduce el espacio entre los elementos */
+    }
+}
 
         .hero-img {
             max-width: 30%;
@@ -199,6 +208,7 @@
     <!-- Header -->
     <header>
         <div class="logo">My Website</div>
+        <div class="menu-toggle">☰</div> <!-- Botón hamburguesa -->
         <nav>
             <a href="#hero">Home</a>
             <a href="#about">About</a>
@@ -422,7 +432,7 @@
     transition: transform 0.6s;
   }
 
-  /* Flip on click*/
+  /*Flip on click*/
   .flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
@@ -500,7 +510,12 @@
             border-radius: 20px; /* Bordes redondeados */
             margin-bottom: 20px;
         }
-        /* Ajuste del menú de navegación cuando la pantalla es más pequeña */
+        .menu-toggle {
+    display: none; /* Ocultarlo por defecto */
+    font-size: 24px;
+    cursor: pointer;
+}
+    /* Ajustar el menú de navegación para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
@@ -510,19 +525,28 @@
     }
 
     nav {
+        display: none; /* Ocultar menú por defecto */
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        width: 100%;
     }
 
     nav a {
         display: block;
-        padding: 8px;
+        padding: 10px;
     }
 
-    .download-btn {
-        margin-top: 10px;
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
     }
+
+    .menu-open nav {
+        display: flex;
+    }
+
 
     /* Asegurar que el hero text ocupe toda la pantalla */
     .hero {
@@ -1089,6 +1113,32 @@
     a img:hover {
         transform: scale(1.05); /* Efecto de zoom */
     }
+    /* Ajuste de la sección Education en pantallas pequeñas */
+@media screen and (max-width: 1024px) {
+    #education .education-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #education .education-container > div {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+        max-width: 280px; /* Ajustar tamaño de cada tarjeta */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #education .education-container > div {
+        flex: 1 1 100%; /* Una sola columna en móviles */
+        max-width: 100%;
+    }
+
+    #education img {
+        width: 100%; /* Ajustar imágenes al ancho del contenedor */
+        height: auto;
+    }
+}
 </style>
 
 
@@ -1301,12 +1351,15 @@
       }, 1000); // Tiempo estimado para el scroll
     }
   });
-    document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
         const flipCard = document.querySelector(".flip-card");
 
         flipCard.addEventListener("click", function () {
             this.classList.toggle("flipped");
         });
+    });
+    document.querySelector(".menu-toggle").addEventListener("click", function() {
+        document.querySelector("header").classList.toggle("menu-open");
     });
     </script>
 </body>
