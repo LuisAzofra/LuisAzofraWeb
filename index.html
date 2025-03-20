@@ -64,6 +64,11 @@
         .download-btn:hover {
             background-color: var(--primary);
         }
+        @media (max-width: 768px) { 
+    .download-btn {
+        margin-bottom: -50px; /* Reduce el espacio en pantallas pequeñas */
+    }
+}
 
         .hero {
             display: flex;
@@ -233,8 +238,10 @@
                 professional growth.
             </p>
             <div class="info fade-in-up delay-2" style="display: flex; align-items: center; gap: 6px;">
-                <div class="loader"></div>
-                <span>Berlin, Germany</span>
+                <span style="display: flex; align-items: center; gap: 6px;">
+                    <div class="loader"></div>
+                    <span>Berlin, Germany</span>
+                </span>
     <span style="margin-left: 30px;margin-bottom: 3px;">✔️ Available for Work</span>
          
             </div>
@@ -259,7 +266,7 @@
     </div>
     <!-- Caption Below -->
     <p class="flip-caption">I also enjoy capturing everyday moments 📸</p>
-    <p class="flip-caption2" >(Hover to flip)</p>
+    <p class="flip-caption2" >(Tap to flip)</p>
   </div>
     
     <!-- Link para cargar Font Awesome -->
@@ -511,9 +518,24 @@
             margin-bottom: 20px;
         }
         .menu-toggle {
+    color: #b8b8b8;  /* Cambia a un gris oscuro */
     display: none; /* Ocultarlo por defecto */
     font-size: 24px;
     cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .flip-card {
+        width: 100% !important;  /* Ocupará el ancho de la pantalla */
+        max-width: 320px;  /* Limitar su tamaño */
+        height: auto;  /* Permitir altura dinámica */
+    }
+
+    .flip-card-front img,
+    .flip-card-back img {
+        width: 100%;  /* Ajustar imágenes al tamaño del contenedor */
+        height: auto;
+        object-fit: cover;
+    }
 }
     /* Ajustar el menú de navegación para pantallas pequeñas */
 @media screen and (max-width: 768px) {
@@ -562,6 +584,27 @@
     .hero-img {
         max-width: 80%;
         margin-top: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .loader {
+    margin-right: 9px; /* Ajusta el espacio solo en el icono rojo */
+    margin-left:9px;
+}
+
+    .info span:first-child {
+        display: flex;
+        align-items: center;
+        gap: 2px; /* Mantiene el icono rojo a la izquierda del texto */
+    }
+
+    .available-work {
+        margin-left: 0; /* Evita desplazamiento raro */
     }
 }
 
@@ -1114,28 +1157,21 @@
         transform: scale(1.05); /* Efecto de zoom */
     }
     /* Ajuste de la sección Education en pantallas pequeñas */
-@media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
     #education .education-container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
     }
 
     #education .education-container > div {
-        flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
-        max-width: 280px; /* Ajustar tamaño de cada tarjeta */
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #education .education-container > div {
-        flex: 1 1 100%; /* Una sola columna en móviles */
-        max-width: 100%;
+        width: 90%;  /* Se ajusta al ancho disponible */
+        max-width: 350px;  /* Tamaño máximo */
     }
 
     #education img {
-        width: 100%; /* Ajustar imágenes al ancho del contenedor */
+        width: 100%;  /* Las imágenes se ajustarán */
         height: auto;
     }
 }
