@@ -523,24 +523,17 @@
     font-size: 24px;
     cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .flip-card {
-        width: 100% !important;  /* Ocupará el ancho de la pantalla */
-        max-width: 320px;  /* Limitar su tamaño */
-        height: auto;  /* Permitir altura dinámica */
+        width: 90%; /* Ajustar al ancho de la pantalla sin sobresalir */
+        max-width: 300px; /* Máximo tamaño para que no sea demasiado grande */
+        height: auto; /* Adaptar la altura dinámicamente */
     }
 
-    .flip-card-front img,
-    .flip-card-back img {
-        width: 100%;  /* Ajustar imágenes al tamaño del contenedor */
-        height: auto;
-        object-fit: cover;
-    }
-.tap-to-flip-img {
-        max-width: 90%; /* Reduce el tamaño en pantallas pequeñas */
-        height: auto; /* Mantiene la proporción */
-        display: block;
-        margin: 0 auto; /* Centra la imagen */
+    .flip-card img {
+        width: 100%; /* La imagen ocupa todo el contenedor */
+        height: auto; /* Mantener proporciones sin recortar */
+        max-height: 400px; /* Evitar imágenes demasiado largas */
     }
 }
     /* Ajustar el menú de navegación para pantallas pequeñas */
@@ -1163,22 +1156,24 @@
         transform: scale(1.05); /* Efecto de zoom */
     }
     /* Ajuste de la sección Education en pantallas pequeñas */
-    @media screen and (max-width: 1024px) {
-    #education .education-container {
+     @media (max-width: 768px) { 
+    .education-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra los elementos */
+        gap: 30px; /* Espaciado entre cada uno */
     }
 
-    #education .education-container > div {
-        width: 90%;  /* Se ajusta al ancho disponible */
-        max-width: 350px;  /* Tamaño máximo */
+    .education-container > div {
+        width: 90%; /* Hace que cada sección use casi todo el ancho */
+        max-width: 350px; /* Limita el tamaño para que no sean demasiado grandes */
+        text-align: center; /* Centra el contenido */
     }
 
-    #education img {
-        width: 100%;  /* Las imágenes se ajustarán */
+    .education-container img {
+        width: 100%; /* Ajusta las imágenes para que no sobresalgan */
         height: auto;
+        max-width: 300px; /* Evita que sean demasiado grandes */
     }
 }
 </style>
