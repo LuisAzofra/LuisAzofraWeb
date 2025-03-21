@@ -617,28 +617,29 @@
 }
 
 /* Ajustar "About" cuando la pantalla es más pequeña */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #about {
-        flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse; /* Imagen debajo del texto */
+        align-items: center;
         text-align: center;
         gap: 20px;
     }
 
-    #about .about-img {
-        order: 2; /* Imagen debajo del texto */
-        text-align: center;
-    }
-
-    #about .about-text {
-        order: 1; /* Texto arriba */
-    }
-
     .flip-card {
         width: 100%;
-        height: auto;
         max-width: 300px;
+        height: auto; /* Que la altura se ajuste automáticamente */
+        margin-top: 20px; /* Espacio arriba */
+    }
+
+    .flip-card img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
     }
 }
+
     </style>
     
     
@@ -1168,21 +1169,21 @@
    @media (max-width: 768px) {
     #education .education-container {
         display: flex;
-        flex-direction: column; /* Apila los elementos en columna */
-        align-items: center; /* Centra los elementos */
-        gap: 30px; /* Espacio entre elementos */
+        flex-direction: column; /* Apilar elementos */
+        align-items: center; /* Centrar contenido */
+        text-align: center; /* Centrar texto */
+        gap: 20px; /* Espacio entre elementos */
     }
 
     #education .education-container > div {
-        width: 90%; /* Usa casi todo el ancho */
-        max-width: 350px; /* Evita que sean demasiado grandes */
-        text-align: center; /* Centra el contenido */
+        width: 90%; /* Usar casi todo el ancho disponible */
+        max-width: 350px; /* No demasiado grandes */
     }
 
     #education .education-container img {
-        width: 100%; /* Ajusta las imágenes */
+        width: 100%; /* Ajusta imágenes */
         height: auto;
-        max-width: 300px; /* Evita que sean demasiado grandes */
+        max-width: 300px;
     }
 }
 
