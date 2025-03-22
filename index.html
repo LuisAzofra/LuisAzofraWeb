@@ -1121,7 +1121,8 @@
     <h2 style="text-align: center; margin-bottom: 40px;">
         <span class="skills-header">Education and Training</span>
     </h2>
-    <div style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+    <div class="education-container" style="display: flex; justify-content: center; gap: 40px; text-align: center;">
+    
         <!-- Education 1 -->
         <div style="flex: 1;">
             <p style="margin: 0; color: #6b7280;">1/07/2024 – Now · Germany</p>
@@ -1166,26 +1167,25 @@
         transform: scale(1.05); /* Efecto de zoom */
     }
     /* Ajuste de la sección Education en pantallas pequeñas */
-   @media (max-width: 768px) {
-    #education .education-container {
-        display: flex;
-        flex-direction: column; /* Apilar elementos */
-        align-items: center; /* Centrar contenido */
-        text-align: center; /* Centrar texto */
-        gap: 20px; /* Espacio entre elementos */
-    }
+  @media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-    #education .education-container > div {
-        width: 90%; /* Usar casi todo el ancho disponible */
-        max-width: 350px; /* No demasiado grandes */
-    }
+  .education-container > div {
+    width: 90%;
+    max-width: 350px;
+  }
 
-    #education .education-container img {
-        width: 100%; /* Ajusta imágenes */
-        height: auto;
-        max-width: 300px;
-    }
+  .education-container img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
 }
+
 
 </style>
 
