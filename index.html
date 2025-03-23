@@ -538,7 +538,7 @@
     margin-bottom: 60px; /* Aumentamos el espacio debajo de la lista */
   }
     #about .about-text {
-    margin-bottom: 60px; /* Empuja la flip-card hacia abajo */
+    margin-bottom: 80px; /* Empuja la flip-card hacia abajo */
   }
 
 
@@ -555,15 +555,20 @@
         max-height: 400px;
     }
     .flip-caption,
-.flip-caption2 {
-  margin-top: 180px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: #555;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .flip-caption2 {
+    margin-top: 90px;
+    font-size: 0.85rem;
+    color: #555;
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Esta línea asegura que estén una debajo de otra sin extra espacios */
+  .flip-caption2 {
+    margin-top: 8px; /* solo un pequeño espacio debajo de la primera */
+  }
 }
 
     /* Ajustar el menú de navegación para pantallas pequeñas */
