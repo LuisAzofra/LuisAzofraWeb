@@ -761,7 +761,7 @@
                         <h3 style="margin: 0;">Full Stack Developer - Intern</h3>
                     </div>
                 </div>
-                <p style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
+                <p  class="job-date" style="color: var(--light-text); font-size: 0.9rem; margin: 0;">Jan 2024 - Jun 2024 · 6 months</p>
             </div>
             <ul style="margin: 10px 0; padding-left: 30px; color: var(--light-text);">
                 <li>Developed front-end and back-end functionalities to enhance company tools.</li>
@@ -787,7 +787,7 @@
                         <h3 style="margin: 0;">Software Developer - Summer Internship</h3>
                     </div>
                 </div>
-                <p style="color: var(--light-text); font-size: 0.9rem; margin: 0;">May 2020 - Oct 2020 · 5 months</p>
+                <p  class="job-date" style="color: var(--light-text); font-size: 0.9rem; margin: 0;">May 2020 - Oct 2020 · 5 months</p>
             </div>
             <ul style="margin: 10px 0; padding-left: 30px; color: var(--light-text);">
                 <li>Implemented database optimizations and improved query performance.</li>
@@ -820,6 +820,11 @@
         width: 15px; /* Tamaño del perro */
         animation: tiltWalk 0.8s steps(2) infinite; /* Simulación del movimiento */
     }
+    @media (max-width: 768px) {
+  .job-date {
+    padding-left: 10px;
+  }
+}
 
     @keyframes moveDog {
         0% {
